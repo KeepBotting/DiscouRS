@@ -1,14 +1,46 @@
-.hello-world-banner {
-    height: 300px;
+.discourse-root {
+  background-image: url('https://2004.lostcity.rs/img/background2.jpg');
+  background-size:65% auto;
+  background-attachment: fixed;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+.d-header {
+  width: auto;
+  box-shadow: none;
+  border: 2px solid #382418;
+}
+
+.combo-box {
+  box-shadow: none;
+  border: 2px solid #382418;
+}
+
+.combo-box .combo-box-header {
+  border: none;
+}
+
+.sidebar-wrapper {
+  background: rgba(0,0,0,0.85);
+}
+
+.posts-wrapper {
+  background: rgba(0,0,0,0.85);
+}
+
+.topic-list {
+  background-color: black;
+}
+
+.head-tag-banner {
+    border: none;
     width: 100%;
-    background: red;
-    display: flex;
+    min-height: 42px;
+    height: 100%;
+    background-image: url('https://2004.lostcity.rs/img/edge_c.jpg');
+    background-repeat: repeat-x;
+    background-position: center;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1em;
-  }
-  
-  .hello-world {
-    font-size: 8em;
-    color: white;
-  }
+}
