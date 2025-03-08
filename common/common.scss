@@ -1,6 +1,6 @@
 .discourse-root {
-  background-image: url('https://2004.lostcity.rs/img/background2.jpg');
-  background-size:65% auto;
+  background-image: url(#{$background});
+  background-size: 65% auto;
   background-attachment: fixed;
   background-repeat: repeat-y;
   background-position: center;
@@ -13,11 +13,10 @@
 }
 
 .combo-box {
-  box-shadow: none;
   border: 2px solid #382418;
 }
 
-.combo-box .combo-box-header {
+.list-controls .combo-box .combo-box-header {
   border: none;
 }
 
@@ -25,22 +24,73 @@
   background: rgba(0,0,0,0.85);
 }
 
+.sidebar-wrapper .sidebar-container {
+  border-right: 2px solid #382418;  
+}
+
+.topic-body {
+  border-top: 2px solid #382418;
+}
+
+.topic-avatar {
+  border-top: 2px solid #382418;
+}
+
+.topic-map {
+  background: #382418;
+}
+
 .posts-wrapper {
-  background: rgba(0,0,0,0.85);
+  background: #1c1610;
 }
 
 .topic-list {
   background-color: black;
 }
 
+.topic-above-footer-buttons-outlet.presence {
+  display: none;
+  visibility: hidden;
+}
+
+.topic-map.--op {
+  display: none;
+  visibility: hidden;
+}
+
+.topic-map.--bottom {
+  display: none;
+  visibility: hidden;
+}
+
+body:not(.archetype-private_message) .topic-map {
+  display:none;
+  visibility:hidden;
+}
+
+.more-topics__container {
+  display: none;
+  visibility: hidden;
+}
+
+.post-action-menu__like-count {
+  display: none;
+  visibility: hidden;
+}
+
+.post-action-menu__like {
+  display: none;
+  visibility: hidden;
+}
+
 .head-tag-banner {
-    border: none;
-    width: 100%;
-    min-height: 42px;
-    height: 100%;
-    background-image: url('https://2004.lostcity.rs/img/edge_c.jpg');
-    background-repeat: repeat-x;
-    background-position: center;
-    align-items: center;
-    justify-content: center;
+  border: none;
+  width: 100%;
+  min-height: 42px;
+  height: 100%;
+  background-image: url(#{$head-tag-banner});
+  background-repeat: repeat-x;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
 }

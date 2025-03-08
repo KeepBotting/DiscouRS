@@ -4,6 +4,8 @@
     "license_url": "https://github.com/KeepBotting/DiscouRS/blob/main/LICENSE",
     
     "assets": {
+        "background": "assets/background.jpg",
+        "head-tag-banner": "assets/head-tag-banner.jpg"
     }
 
 }
