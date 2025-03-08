@@ -3,6 +3,18 @@ body, p, td {
 	font-size: 13px;
 }
 
+.head-tag-banner {
+  border: none;
+  width: 100%;
+  min-height: 42px;
+  height: 100%;
+  background-image: url(#{$head-tag-banner});
+  background-repeat: repeat-x;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+}
+
 :root {
 	--d-max-width: 550px;
 }
@@ -140,6 +152,14 @@ body:not(.archetype-private_message) .topic-map {
   visibility: hidden;
 }
 
+.open .grippie::before {
+	border-top: 3px double var(--tertiary);
+}
+
+.open .grippie {
+	background: #382418;
+}
+
 #reply-control {
 	max-width: 1000px;
 }
@@ -150,16 +170,4 @@ body:not(.archetype-private_message) .topic-map {
 
 .reply-area {
 	background-color: #1c1610;
-}
-
-.head-tag-banner {
-  border: none;
-  width: 100%;
-  min-height: 42px;
-  height: 100%;
-  background-image: url(#{$head-tag-banner});
-  background-repeat: repeat-x;
-  background-position: center;
-  align-items: center;
-  justify-content: center;
 }
