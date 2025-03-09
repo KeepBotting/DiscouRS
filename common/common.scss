@@ -160,9 +160,10 @@ body:not(.archetype-private_message) .topic-map {
 	border-bottom: 3px solid #382418;
 }
 
-.topic-list .posters {
+// this causes avatars to stack vertically when multiple users have posted in a thread
+/* .topic-list .posters {
 	width: 0px;
-}
+}*/
 
 .latest-topic-list-item {
 	border-bottom: 1px solid #382418;
