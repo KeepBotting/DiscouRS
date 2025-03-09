@@ -25,6 +25,7 @@ body, p, td {
   background-attachment: fixed;
   background-repeat: repeat-y;
   background-position: center;
+  background-color: #000000;
 }
 
 .avatar {
@@ -58,6 +59,10 @@ img.avatar {
   border-right: 2px solid #382418;  
 }
 
+#topic-title {
+	margin-bottom: .25em;
+}
+
 .topic-body {
   padding: .4em 0 0 0;
   border-top: 2px solid #382418;
@@ -80,10 +85,15 @@ img.avatar {
 
 .posts-wrapper {
   background: #1c1610;
+  border-bottom: 2px solid #382418;
 }
 
 .sticky-header .topic-list-header {
 	background: #1c1610;
+}
+
+tbody {
+	border-top: 3px solid #382418;
 }
 
 .topic-list {
@@ -142,14 +152,31 @@ body:not(.archetype-private_message) .topic-map {
   visibility: hidden;
 }
 
+.table-heading {
+	border-bottom: 3px solid #382418;
+}
+
+.topic-list .posters {
+	width: 0px;
+}
+
+.latest-topic-list-item {
+	border-bottom: 1px solid #382418;
+}
+
 .post-action-menu__like-count {
-  display: none;
-  visibility: hidden;
+  //display: none;
+  //visibility: hidden;
 }
 
 .post-action-menu__like {
+  //display: none;
+  //visibility: hidden;
+}
+
+.most-liked-section {
   display: none;
-  visibility: hidden;
+  visibility: hidden; 
 }
 
 .open .grippie::before {
@@ -170,4 +197,63 @@ body:not(.archetype-private_message) .topic-map {
 
 .reply-area {
 	background-color: #1c1610;
+}
+
+.avatar-wrapper {
+	background-color: #1c1610;
+	border-radius: 0%;
+}
+
+.user-card .card-content, .group-card .card-content {
+	background: #1c1610;
+}
+
+.user-content {
+	background: #1c1610;
+  padding-bottom: 0px;
+  margin-top: 0em;
+}
+
+.post-list .post-list-item {
+  background: #1c1610; 
+	border-bottom: 1px solid #382418;
+
+}
+
+.user-main .about.collapsed-info .details {
+  border-top: 1px solid #382418;
+  padding-top: 6px;
+  border-bottom: 1px solid #382418;
+	background: #1c1610;
+}
+
+.user-main .about .details {
+  border-top: 1px solid #382418;
+  padding-top: 6px;
+  border-bottom: 1px solid #382418;
+	background: #1c1610;
+}
+
+.new-user-wrapper .user-navigation {
+	background: #1c1610;
+}
+
+.user-stream .user-notifications-list li.notification {
+  border-bottom: 1px solid #382418;
+	background: #1c1610;
+}
+
+.stats-likes-given .user-stat {
+  //display: none;
+  //visibility: hidden;
+}
+
+.stats-likes-received .user-stat {
+  //display: none;
+  //visibility: hidden;
+}
+
+.sr-only {
+  display: none;
+  visibility: hidden;
 }

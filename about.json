@@ -7,6 +7,22 @@
         "background": "assets/background.jpg",
         "head-tag-banner": "assets/head-tag-banner.jpg",
         "icons-sprite": "assets/mod-crown.svg"
-    }
+    },
 
+    "color_schemes": {
+        "DiscouRS": {
+            "primary": "ffffff",
+            "secondary": "000000",
+            "tertiary": "90c040",
+            "quaternary": "382418",
+            "header_background": "000000",
+            "header_primary": "dddddd",
+            "highlight": "a87137",
+            "danger": "e45735",
+            "success": "1ca551",
+            "love": "ffd700",
+            "selected": "052e3d",
+            "hover": "313131"
+        }
+    }
 }
