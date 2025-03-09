@@ -108,11 +108,30 @@ tbody {
 	border-bottom: 1px solid #382418;
 }
 
+.posters.topic-list-data {
+	display: none;
+}
+
+// last visited for the "latest" page
 .topic-list .topic-list-item-separator .topic-list-data {
 	border-top: 1px solid gold;
 }
 
+// last visited for the "latest" page
 .topic-list .topic-list-item-separator .topic-list-data span {
+	position: relative;
+	background-color: #1c1610;
+	color: gold;
+}
+
+// last visited for inside topics
+.small-action.topic-post-visited .topic-post-visited-line {
+  border-bottom: 1px solid gold;
+  color: gold
+}
+
+// last visited for inside topics
+.small-action.topic-post-visited .topic-post-visited-line .topic-post-visited-message {
 	position: relative;
 	background-color: #1c1610;
 	color: gold;
