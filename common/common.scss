@@ -59,6 +59,10 @@ img.avatar {
   border-right: 2px solid #382418;  
 }
 
+.sidebar-section-link-wrapper .sidebar-section-link--active, .sidebar-section-link-wrapper .sidebar-section-link.active {
+	background: rgba(144, 192, 64, 0.75);
+}
+
 #topic-title {
 	margin-bottom: .25em;
 }
@@ -172,6 +176,23 @@ body:not(.archetype-private_message) .topic-map {
 .post-action-menu__like {
   //display: none;
   //visibility: hidden;
+}
+
+nav.post-controls .actions button {
+	margin-left: 1px;
+}
+
+nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions button.create {
+	margin-left: 1px;
+}
+
+.post-info.edits .widget-button .d-button-label {
+  display: none;
+  visibility: hidden;
+}
+
+.heatmap-high, .heatmap-high a, .heatmap-high .d-icon, .heatmap-high .d-button-label {
+	color: #dddddd !important;
 }
 
 .most-liked-section {
