@@ -303,6 +303,26 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   display: none !important;
 }
 
+.first.username.moderator a::before {
+  content: '';
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 12px; height: 12px;
+  margin-right: 2px;
+  background: url(#{$fmod}) no-repeat center/contain;
+}
+
+.topic-post:has(.first.username.moderator) {
+  .topic-body { border-top: none; }
+  .topic-avatar { border-top: none; }
+  border: 2px solid rgb(0, 92, 0) !important;
+  background-color: rgb(10, 38, 10) !important;
+}
+/*
+.first.username .svg-icon-title {
+  display: none !important;
+}
+
 .first.username.staff a::before {
   content: '';
   display: inline-block;
@@ -334,3 +354,4 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   border: 2px solid rgb(0, 92, 0) !important;
   background-color: rgb(10, 38, 10) !important;
 }
+*/
