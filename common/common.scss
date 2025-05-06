@@ -337,7 +337,7 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   left: 50px;
   width: 13px;
   height: 11px;
-  background: url({$fmod}) no-repeat center/contain;
+  background: url(#{$fmod-crown}) no-repeat center/contain;
   pointer-events: none;
 }
 .topic-post.group-jmod .topic-avatar::after {
@@ -347,7 +347,7 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   left: 50px;
   width: 13px;
   height: 11px;
-  background: url({$jmod}) no-repeat center/contain;
+  background: url(#{$jmod-crown}) no-repeat center/contain;
   pointer-events: none;
 }
 
