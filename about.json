@@ -6,8 +6,8 @@
     "assets": {
         "background": "assets/background.jpg",
         "head-tag-banner": "assets/head-tag-banner.jpg",
-        "jmod-crown": "assets/jmod.png",
-        "fmod-crown": "assets/fmod.png"
+        "jmod": "assets/jmod.png",
+        "fmod": "assets/fmod.png"
     },
 
     "color_schemes": {
