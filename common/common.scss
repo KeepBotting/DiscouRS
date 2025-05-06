@@ -299,6 +299,7 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   visibility: hidden;
 }
 
+/* Topic Post Flair and Background */
 .topic-post.group-fmod article.boxed {
   .topic-body { border-top: none; }
   .topic-avatar { border-top: none; }
@@ -311,30 +312,9 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   border: 1px solid rgb(207, 185, 0) !important;
   background-color: rgb(65, 58, 0) !important;
 }
-.topic-meta-data {
-  position: relative;
-}
-.topic-avatar .avatar-flair {
-  position: absolute;
-  width: 13px;
-  height: 11px;
-  top: 4px;
-  left: 50px;
-  z-index: 10;
-  background: none;
-}
-.topic-meta-data .names {
-  margin-left: 18px;
-}
-.topic-avatar,
-.topic-meta-data {
-  overflow: visible;
-}
-
 .topic-meta-data .svg-icon-title {
   display: none !important;
 }
-
 .topic-meta-data svg.d-icon-shield-halved {
   display: none !important;
 }
@@ -342,10 +322,39 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   display: inline-block;
   margin-left: 10px;
 }
+.topic-avatar .avatar-flair {
+  display: none !important;
+}
+
+.topic-post .topic-avatar {
+  position: relative;
+  overflow: visible;
+}
+.topic-post.group-fmod .topic-avatar::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 50px;
+  width: 13px;
+  height: 11px;
+  background: url({$fmod}) no-repeat center/contain;
+  pointer-events: none;
+}
+.topic-post.group-jmod .topic-avatar::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 50px;
+  width: 13px;
+  height: 11px;
+  background: url({$jmod}) no-repeat center/contain;
+  pointer-events: none;
+}
+
+/* User Card */
 .user-card .card-content {
   position: relative;
 }
-
 .user-card-avatar .avatar-flair {
   position: absolute !important;
   top:54px;
@@ -355,11 +364,30 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   background-size: contain;
   pointer-events: none;
 }
-
 .user-card .names {
   margin-left: 24px;
 }
-
 .user-card .names__primary svg.d-icon-shield-halved {
+  display: none !important;
+}
+
+/* User Profile Page */
+.details .primary {
+  position: relative;
+}
+.details .user-profile-avatar .avatar-flair {
+  position: absolute !important;
+  top: 10px; 
+  left: 58px;
+  width: 13px  !important;
+  height: 11px !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none; 
+}
+.details .primary-textual .user-profile-names {
+  margin-left: 15px;  
+}
+.details .user-profile-names__primary svg.d-icon-shield-halved {
   display: none !important;
 }
