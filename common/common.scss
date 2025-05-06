@@ -311,7 +311,6 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   border: 1px solid rgb(207, 185, 0) !important;
   background-color: rgb(65, 58, 0) !important;
 }
-
 .topic-meta-data {
   position: relative;
 }
@@ -319,16 +318,14 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   position: absolute;
   width: 13px;
   height: 11px;
-  top: 5%;
+  top: 4px;
   left: 50px;
   z-index: 10;
   background: none;
 }
-
 .topic-meta-data .names {
   margin-left: 18px;
 }
-
 .topic-avatar,
 .topic-meta-data {
   overflow: visible;
@@ -339,5 +336,30 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
 }
 
 .topic-meta-data svg.d-icon-shield-halved {
+  display: none !important;
+}
+.user-title {
+  display: inline-block;
+  margin-left: 10px;
+}
+.user-card .card-content {
+  position: relative;
+}
+
+.user-card-avatar .avatar-flair {
+  position: absolute !important;
+  top:54px;
+  left: 128px;
+  width: 13px !important;
+  height: 11px !important;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.user-card .names {
+  margin-left: 24px;
+}
+
+.user-card .names__primary svg.d-icon-shield-halved {
   display: none !important;
 }
