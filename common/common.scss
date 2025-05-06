@@ -26,6 +26,8 @@ body, p, td {
   background-repeat: repeat-y;
   background-position: center;
   background-color: #000000;
+  transition: background-position 0.25s ease;
+  will-change: background-position;
 }
 
 .avatar {
@@ -384,3 +386,12 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
 
 /* User Profile Page */
 .details .user-profile-names__primary svg.d-icon-shield-halved { display: none !important; }
+
+/* Menu Fix */
+body.has-sidebar-page .discourse-root {
+  background-position: calc(50% + 150px) center;
+}
+body.has-sidebar-page #main-outlet {
+  width: 532px;
+  margin-left: 20px !important;
+}
