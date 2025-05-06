@@ -299,22 +299,41 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   visibility: hidden;
 }
 
-.first.username .svg-icon-title {
+.topic-post.group-fmod article.boxed {
+  border: 2px solid rgb(0, 92, 0) !important;
+  background-color: rgb(10, 38, 10) !important;
+}
+.topic-post.group-jmod article.boxed {
+  border: 1px solid rgb(207, 185, 0) !important;
+  background-color: rgb(65, 58, 0) !important;
+}
+
+.topic-meta-data {
+  position: relative;
+}
+
+.topic-avatar .avatar-flair {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 8px;
+  left: 70px;
+  z-index: 10;
+}
+
+.topic-meta-data .names {
+  margin-left: 96px;
+}
+
+.topic-avatar,
+.topic-meta-data {
+  overflow: visible;
+}
+
+.topic-meta-data .svg-icon-title {
   display: none !important;
 }
 
-.first.username.moderator a::before {
-  content: '';
-  display: inline-block;
-  vertical-align: text-bottom;
-  width: 12px; height: 12px;
-  margin-right: 2px;
-  background: url(#{$fmod}) no-repeat center/contain;
-}
-
-.topic-post:has(.first.username.moderator) {
-  .topic-body { border-top: none; }
-  .topic-avatar { border-top: none; }
-  border: 2px solid rgb(0, 92, 0) !important;
-  background-color: rgb(10, 38, 10) !important;
+.topic-meta-data svg.d-icon-shield-halved {
+  display: none !important;
 }
