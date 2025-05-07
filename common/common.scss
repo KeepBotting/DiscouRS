@@ -521,7 +521,7 @@ body.has-sidebar-page #main-outlet {
   height: 16px;
   background: url($locked) no-repeat center/contain;
 }
-.topic-status.unpinned.pin-toggle-button::before {
+.topic-status.unpinned::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -529,7 +529,7 @@ body.has-sidebar-page #main-outlet {
   height: 16px;
   background: url($xstickied) no-repeat center/contain;
 }
-.topic-status.pinned.pin-toggle-button::before {
+.topic-status.pinned::before {
   content: "";
   display: inline-block;
   width: 16px;
