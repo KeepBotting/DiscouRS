@@ -513,7 +513,7 @@ body.has-sidebar-page #main-outlet {
 .pin-toggle-button svg {
   display: none !important;
 }
-.topic-status::before {
+[class="topic-status"]::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
