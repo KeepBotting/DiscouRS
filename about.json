@@ -7,7 +7,9 @@
         "background": "assets/background.jpg",
         "head-tag-banner": "assets/head-tag-banner.jpg",
         "jmod": "assets/jmod.png",
-        "fmod": "assets/fmod.png"
+        "fmod": "assets/fmod.png",
+        "locked": "assets/locked.png",
+        "stickied": "assets/stickied.png"
     },
 
     "color_schemes": {

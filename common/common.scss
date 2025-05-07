@@ -507,3 +507,25 @@ body.has-sidebar-page #main-outlet {
 .embedded-posts.bottom>div:last-of-type .row::before {
   display: none;
 }
+
+/* Authentic Lock & Pin Icons */
+.topic-status svg,
+.pin-toggle-button svg {
+  display: none !important;
+}
+.topic-status::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 13px;
+  background: url($locked) no-repeat center/contain;
+}
+.pin-toggle-button::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 13px;
+  background: url($stickied) no-repeat center/contain;
+}
