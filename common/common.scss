@@ -1,12 +1,23 @@
+// --primary-low is the grey color that shows up in a 1px line 
+// near the bottom of topics. i want to remove the line but idk
+// which element it is. changing this color is a workaround
+// but also changes the colors of buttons and other elements
+// that look fine grey!
+
+// same typeface and font size as original forums
 body, p, td {
 	font-family: Arial,Helvetica,sans-serif;
 	font-size: 13px;
 }
 
+// styling for bigshot's chain graphic across the top
 .head-tag-banner {
   border: none;
+  // TODO fixed-width probably better?
+  // about 675px seems good
   width: 100%;
-  min-height: 42px;
+  margin: auto;
+  min-height: 32px;
   height: 100%;
   background-image: url(#{$head-tag-banner});
   background-repeat: repeat-x;
@@ -15,10 +26,12 @@ body, p, td {
   justify-content: center;
 }
 
+// fixed-width at 550px to fit within the background graphic
 :root {
 	--d-max-width: 550px;
 }
 
+// styling for bigshot's background graphic
 .discourse-root {
   background-image: url(#{$background});
   //background-size: 65% auto;
@@ -30,45 +43,60 @@ body, p, td {
   will-change: background-position;
 }
 
+// smaller avatars
 .avatar {
   width: 38px;
   height: 38px;
 }
 
+// square avatars - no need for a theme component!
 img.avatar {
 	border-radius: 0%;
 }
 
+// styling for the logo header/control bar at the top
 .d-header {
-  width: auto;
+  // TODO fixed-width probably better?
+  width: 100%;
+  margin: auto;
   box-shadow: none;
-  border: 2px solid #382418;
+  border-top: 2px solid #382418;
+  border-bottom: 2px solid #382418;
 }
 
+// border around "categories" and "tags" combo boxes
 .combo-box {
   border: 2px solid #382418;
 }
 
+// get rid of white lines on combo boxes
 .list-controls .combo-box .combo-box-header {
   border: none;
 }
 
+// transparent sidebar so you can at least still see the background
+// eventually i'll properly theme the sidebar once i figure out
+// how to make it not move the main view to the right when opened
 .sidebar-wrapper {
   background: rgba(0,0,0,0.85);
 }
 
+// sidebar borders
 .sidebar-wrapper .sidebar-container {
   border-right: 2px solid #382418;  
 }
 
+// sidebar currently-selected item
 .sidebar-section-link-wrapper .sidebar-section-link--active, .sidebar-section-link-wrapper .sidebar-section-link.active {
 	background: rgba(144, 192, 64, 0.75);
 }
 
+// tighten up margin below topic titles
 #topic-title {
 	margin-bottom: .25em;
 }
 
+// post dividing line + margin before start of post
 .topic-body {
   padding: .4em 0 0 0;
   border-top: 2px solid #382418;
@@ -110,8 +138,10 @@ tbody {
 	border-bottom: 1px solid #382418;
 }
 
+// hide avatars from topic lists
 .posters.topic-list-data {
 	display: none;
+  visibility: hidden;
 }
 
 // last visited for the "latest" page
@@ -145,6 +175,25 @@ tbody {
 
 .list-cell, .category-list td, .category-list th, .table-heading {
 	color: var(--primary-high);
+}
+
+// allow post titles to span across the entire post container
+#topic-title .title-wrapper {
+	width: 100%;
+}
+
+// hide "first time user has posted" callouts in topics
+// once the users are no longer new
+.post-notice.new-user.old {
+	display: none;
+	visibility: hidden;
+}
+
+// styling for "small actions" within topics
+// only used for the time gap callouts? ("1 month later")
+.small-action .topic-avatar, .small-action .small-action-desc {
+	border-top: 2px solid #382418;
+	border-bottom: 2px solid #382418;
 }
 
 .topic-navigation {
@@ -286,6 +335,13 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
 	background: #1c1610;
 }
 
+// styling for @mentions
+/*a.mention, a.mention-group {
+  color: black;
+  //font-weight: bold;
+	background: var(--tertiary);
+}*/
+
 .stats-likes-given .user-stat {
   //display: none;
   //visibility: hidden;
@@ -296,6 +352,9 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   //visibility: hidden;
 }
 
+// screenreader? this adds weird 1px lines in some places
+// that i haven't figured out how to recolor yet
+// so they are gone for now!
 .sr-only {
   display: none;
   visibility: hidden;
@@ -414,6 +473,13 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
 
 /* User Profile Page */
 .details .user-profile-names__primary svg.d-icon-shield-halved { display: none !important; }
+
+// discourse we love you but "powered by" is inauthentic!
+.powered-by-discourse {
+	display: none;
+	visibility: hidden;
+}
+
 
 /* Menu Fix */
 body.has-sidebar-page .discourse-root {
