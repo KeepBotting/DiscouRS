@@ -332,7 +332,7 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   display: inline-block;
   width: 13px;
   height: 11px;
-  margin-right: 3px;
+  margin-right: 2px;
   vertical-align: text-top;
   background: url($fmod) no-repeat center/contain;
   pointer-events: none;
@@ -345,7 +345,7 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   display: inline-block;
   width: 13px;
   height: 11px;
-  margin-right: 3px;
+  margin-right: 2px;
   vertical-align: text-top;
   background: url($fmod) no-repeat center/contain;
   pointer-events: none;
@@ -358,7 +358,7 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   display: inline-block;
   width: 13px;
   height: 11px;
-  margin-right: 3px;
+  margin-right: 2px;
   vertical-align: text-top;
   background: url($jmod) no-repeat center/contain;
   pointer-events: none;
@@ -371,7 +371,7 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   display: inline-block;
   width: 13px;
   height: 11px;
-  margin-right: 3px;
+  margin-right: 2px;
   vertical-align: text-top;
   background: url($jmod) no-repeat center/contain;
   pointer-events: none;
@@ -385,7 +385,6 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   content: "";
   display: inline-block;
   vertical-align: text-top;
-  margin-right: 4px;
   width: 13px;
   height: 11px;
   transform: scale(1.8);
@@ -400,7 +399,6 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   content: "";
   display: inline-block;
   vertical-align: text-top;
-  margin-right: 4px;
   width: 13px;
   height: 11px;
   transform: scale(1.8);
@@ -423,12 +421,21 @@ body.has-sidebar-page #main-outlet {
 }
 
 /* In-card replies fix */
+.topic-body .reply {
+  background-color: var(--blend-primary-secondary-5);
+  border-left: 4px solid #88b; 
+  width: 450px;
+  margin-left: 20px;
+  .post-link-arrow a {
+    color: white;
+  }
+}
 .embedded-posts.top .row .topic-body {
   min-height:120px;
 }
 .embedded-posts.top .row .topic-body::before {
-  left: -32px;
+  display: none;
 }
 .embedded-posts.bottom>div:last-of-type .row::before {
-  left: 8px;
+  display: none;
 }
