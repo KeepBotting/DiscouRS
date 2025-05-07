@@ -360,6 +360,12 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   visibility: hidden;
 }
 
+// discourse we love you but "powered by" is inauthentic!
+.powered-by-discourse {
+	display: none;
+	visibility: hidden;
+}
+
 /* Topic Post Crown and Background */
 .topic-post.group-fmod article.boxed {
   .topic-body { border-top: none; }
@@ -473,13 +479,6 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
 
 /* User Profile Page */
 .details .user-profile-names__primary svg.d-icon-shield-halved { display: none !important; }
-
-// discourse we love you but "powered by" is inauthentic!
-.powered-by-discourse {
-	display: none;
-	visibility: hidden;
-}
-
 
 /* Menu Fix */
 body.has-sidebar-page .discourse-root {
