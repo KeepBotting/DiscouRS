@@ -9,7 +9,8 @@
         "jmod": "assets/jmod.png",
         "fmod": "assets/fmod.png",
         "locked": "assets/locked.png",
-        "stickied": "assets/stickied.png"
+        "stickied": "assets/stickied.png",
+        "xstickied": "assets/xstickied.png"
     },
 
     "color_schemes": {

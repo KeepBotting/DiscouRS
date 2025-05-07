@@ -517,15 +517,15 @@ body.has-sidebar-page #main-outlet {
   content: "";
   display: inline-block;
   vertical-align: middle;
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
   background: url($locked) no-repeat center/contain;
 }
 .pin-toggle-button::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
-  width: 13px;
-  height: 13px;
-  background: url($stickied) no-repeat center/contain;
+  width: 16px;
+  height: 16px;
+  background: url($xstickied) no-repeat center/contain;
 }
