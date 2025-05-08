@@ -39,6 +39,8 @@ body, p, td {
   background-repeat: repeat-y;
   background-position: center;
   background-color: #000000;
+  transition: background-position 0.25s ease;
+  will-change: background-position;
 }
 
 // smaller avatars
@@ -358,6 +360,12 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   visibility: hidden;
 }
 
+// discourse we love you but "powered by" is inauthentic!
+.powered-by-discourse {
+	display: none;
+	visibility: hidden;
+}
+
 /* Topic Post Crown and Background */
 .topic-post.group-fmod article.boxed {
   .topic-body { border-top: none; }
@@ -389,7 +397,22 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   display: inline-block;
   width: 13px;
   height: 11px;
-  margin-right: 3px;
+  margin-right: 2px;
+  margin-top: 1px;
+  vertical-align: text-top;
+  background: url($fmod) no-repeat center/contain;
+  pointer-events: none;
+}
+.topic-body
+  .topic-meta-data
+  .names
+  span.username.group--fmod > a::before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 11px;
+  margin-right: 2px;
+  margin-top: 1px;
   vertical-align: text-top;
   background: url($fmod) no-repeat center/contain;
   pointer-events: none;
@@ -402,7 +425,22 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   display: inline-block;
   width: 13px;
   height: 11px;
-  margin-right: 3px;
+  margin-right: 2px;
+  margin-top: 1px;
+  vertical-align: text-top;
+  background: url($jmod) no-repeat center/contain;
+  pointer-events: none;
+}
+.topic-body
+  .topic-meta-data
+  .names
+  span.username.group--jmod > a::before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 11px;
+  margin-right: 2px;
+  margin-top: 1px;
   vertical-align: text-top;
   background: url($jmod) no-repeat center/contain;
   pointer-events: none;
@@ -416,7 +454,6 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   content: "";
   display: inline-block;
   vertical-align: text-top;
-  margin-right: 4px;
   width: 13px;
   height: 11px;
   transform: scale(1.8);
@@ -431,7 +468,6 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   content: "";
   display: inline-block;
   vertical-align: text-top;
-  margin-right: 4px;
   width: 13px;
   height: 11px;
   transform: scale(1.8);
@@ -444,8 +480,60 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
 /* User Profile Page */
 .details .user-profile-names__primary svg.d-icon-shield-halved { display: none !important; }
 
-// discourse we love you but "powered by" is inauthentic!
-.powered-by-discourse {
-	display: none;
-	visibility: hidden;
+/* Menu Fix */
+body.has-sidebar-page .discourse-root {
+  background-position: calc(50% + 150px) center;
+}
+body.has-sidebar-page #main-outlet {
+  width: 532px;
+  margin-left: 20px !important;
+}
+
+/* In-card replies fix */
+.topic-body .reply {
+  background-color: var(--blend-primary-secondary-5);
+  border-left: 2px solid #88b;
+  margin-left: 20px;
+  .post-link-arrow a {
+    color: white;
+  }
+}
+.embedded-posts.top .row .topic-body {
+  min-height:120px;
+}
+.embedded-posts.top .row .topic-body::before {
+  display: none;
+}
+.embedded-posts.bottom>div:last-of-type .row::before {
+  display: none;
+}
+
+/* Authentic Lock & Pin Icons */
+.topic-status svg,
+.pin-toggle-button svg {
+  display: none !important;
+}
+[class="topic-status"]::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background: url($locked) no-repeat center/contain;
+}
+.topic-status.unpinned::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background: url($xstickied) no-repeat center/contain;
+}
+.topic-status.pinned::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  background: url($stickied) no-repeat center/contain;
 }
