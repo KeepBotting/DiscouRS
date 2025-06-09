@@ -367,13 +367,19 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
 }
 
 /* Topic Post Crown and Background */
+.topic-post.group-contributor article.boxed {
+  .topic-body { border-top: none; }
+  .topic-avatar { border-top: none; }
+  border: 2px solid rgb(16 16 91) !important;
+  background-color: rgb(5 5 37) !important;
+}
 .topic-post.group-fmod article.boxed {
   .topic-body { border-top: none; }
   .topic-avatar { border-top: none; }
   border: 2px solid rgb(0, 91, 0) !important;
   background-color: rgb(8, 35, 8) !important;
 }
-.topic-post.group-jmod article.boxed {
+.topic-post.group-staffmod article.boxed {
   .topic-body { border-top: none; }
   .topic-avatar { border-top: none; }
   border: 1px solid rgb(195, 176, 0) !important;
@@ -417,10 +423,10 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   background: url($fmod) no-repeat center/contain;
   pointer-events: none;
 }
-.topic-post.group-jmod
+.topic-post.group-staffmod
   .topic-meta-data
   .names
-  span.username.group--jmod > a::before {
+  span.username.group--staffmod > a::before {
   content: "";
   display: inline-block;
   width: 13px;
@@ -428,13 +434,13 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   margin-right: 2px;
   margin-top: 1px;
   vertical-align: text-top;
-  background: url($jmod) no-repeat center/contain;
+  background: url($staffmod) no-repeat center/contain;
   pointer-events: none;
 }
 .topic-body
   .topic-meta-data
   .names
-  span.username.group--jmod > a::before {
+  span.username.group--staffmod > a::before {
   content: "";
   display: inline-block;
   width: 13px;
@@ -442,13 +448,13 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   margin-right: 2px;
   margin-top: 1px;
   vertical-align: text-top;
-  background: url($jmod) no-repeat center/contain;
+  background: url($staffmod) no-repeat center/contain;
   pointer-events: none;
 }
 
 /* User Card */
 .user-card .svg-icon { display: none !important; }
-.user-card.group-jmod 
+.user-card.group-staffmod 
   .names__primary.username 
   .user-profile-link::before {
   content: "";
@@ -459,7 +465,7 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   transform: scale(1.8);
   transform-origin: center center;
   margin-right: 6px;
-  background: url($jmod) no-repeat center/contain;
+  background: url($staffmod) no-repeat center/contain;
   pointer-events: none;
 }
 .user-card.group-fmod 
@@ -545,9 +551,12 @@ body.has-sidebar-page #main-outlet {
 .topic-post article.boxed .regular.contents {
   border:none;
 }
+.topic-post.group-contributor article.boxed .regular.contents {
+  background: transparent;
+}
 .topic-post.group-fmod article.boxed .regular.contents {
   background: transparent;
 }
-.topic-post.group-jmod article.boxed .regular.contents {
+.topic-post.group-staffmod article.boxed .regular.contents {
   background: transparent;
 }
