@@ -513,7 +513,8 @@ body.has-sidebar-page #main-outlet {
 .pin-toggle-button svg {
   display: none !important;
 }
-[class="topic-status"]::before {
+
+.topic-status:has(svg.locked)::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -521,19 +522,21 @@ body.has-sidebar-page #main-outlet {
   height: 16px;
   background: url($locked) no-repeat center/contain;
 }
-.topic-status.unpinned::before {
+
+.topic-status:has(svg.pinned)::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background: url($stickied) no-repeat center/contain;
+}
+
+.topic-status:has(svg.unpinned)::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
   width: 16px;
   height: 16px;
   background: url($xstickied) no-repeat center/contain;
-}
-.topic-status.pinned::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-  background: url($stickied) no-repeat center/contain;
 }
