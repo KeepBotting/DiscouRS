@@ -540,3 +540,14 @@ body.has-sidebar-page #main-outlet {
   height: 16px;
   background: url($xstickied) no-repeat center/contain;
 }
+
+/* DM replies border fix */
+.topic-post article.boxed .regular.contents {
+  border:none;
+}
+.topic-post.group-fmod article.boxed .regular.contents {
+  background: transparent;
+}
+.topic-post.group-jmod article.boxed .regular.contents {
+  background: transparent;
+}
