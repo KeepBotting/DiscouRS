@@ -460,11 +460,11 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   content: "";
   display: inline-block;
   vertical-align: text-top;
-  width: 13px;
+  width: 10px;
   height: 11px;
   transform: scale(1.8);
-  transform-origin: center center;
-  margin-right: 6px;
+  transform-origin: left;
+  margin-right: 12px;
   background: url($staffmod) no-repeat center/contain;
   pointer-events: none;
 }
@@ -474,11 +474,11 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   content: "";
   display: inline-block;
   vertical-align: text-top;
-  width: 13px;
+  width: 10px;
   height: 11px;
   transform: scale(1.8);
-  transform-origin: center center;
-  margin-right: 6px;
+  transform-origin: left;
+  margin-right: 12px;
   background: url($fmod) no-repeat center/contain;
   pointer-events: none;
 }
