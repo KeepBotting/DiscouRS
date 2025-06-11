@@ -460,11 +460,11 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   content: "";
   display: inline-block;
   vertical-align: text-top;
-  width: 13px;
+  width: 10px;
   height: 11px;
   transform: scale(1.8);
-  transform-origin: center center;
-  margin-right: 6px;
+  transform-origin: left;
+  margin-right: 12px;
   background: url($staffmod) no-repeat center/contain;
   pointer-events: none;
 }
@@ -474,11 +474,11 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
   content: "";
   display: inline-block;
   vertical-align: text-top;
-  width: 13px;
+  width: 10px;
   height: 11px;
   transform: scale(1.8);
-  transform-origin: center center;
-  margin-right: 6px;
+  transform-origin: left;
+  margin-right: 12px;
   background: url($fmod) no-repeat center/contain;
   pointer-events: none;
 }
@@ -519,8 +519,7 @@ body.has-sidebar-page #main-outlet {
 .pin-toggle-button svg {
   display: none !important;
 }
-
-.topic-status:has(svg.locked)::before {
+.topic-status:has(svg.d-icon-lock)::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -528,8 +527,7 @@ body.has-sidebar-page #main-outlet {
   height: 16px;
   background: url($locked) no-repeat center/contain;
 }
-
-.topic-status:has(svg.pinned)::before {
+a.topic-status.pinned::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -537,8 +535,7 @@ body.has-sidebar-page #main-outlet {
   height: 16px;
   background: url($stickied) no-repeat center/contain;
 }
-
-.topic-status:has(svg.unpinned)::before {
+a.topic-status.unpinned::before {/*For personally unpinned topics*/
   content: "";
   display: inline-block;
   vertical-align: middle;
