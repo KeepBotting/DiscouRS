@@ -557,3 +557,9 @@ a.topic-status.unpinned::before {/*For personally unpinned topics*/
 .topic-post.group-staffmod article.boxed .regular.contents {
   background: transparent;
 }
+
+/* Background for tables in posts */
+.topic-body .contents .md-table  {
+  --canvas-default:#2d2318;
+  --canvas-subtle:#1c160f;
+}
