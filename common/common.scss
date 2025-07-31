@@ -196,9 +196,17 @@ tbody {
 	border-bottom: 2px solid #382418;
 }
 
+// silly postmodernist topic navigation because discourse is allergic to pagination
+// but this scrollbar is the only discoverable way to jump to a bottom of a topic
+// so we need it for the time being
 .topic-navigation {
-  display: none;
-  visibility: hidden;
+  position: fixed !important;
+  top: 6em;
+  right: calc((100vw - var(--d-container-max-width, 725px)) / 2 - 20px);
+  margin-left: 0 !important;
+  grid-area: auto !important;
+  width: auto;
+  z-index: 9999;
 }
 
 .topic-above-footer-buttons-outlet.presence {
@@ -486,9 +494,12 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
 /* User Profile Page */
 .details .user-profile-names__primary svg.d-icon-shield-halved { display: none !important; }
 
-/* Menu Fix */
+/* Fixes for moving stuff to the right when sidebar is expanded */
 body.has-sidebar-page .discourse-root {
-  background-position: calc(50% + 150px) center;
+  background-position: calc(50% + 148px) center;
+}
+body.has-sidebar-page .topic-navigation {
+  right: 45px;
 }
 body.has-sidebar-page #main-outlet {
   width: 532px;
