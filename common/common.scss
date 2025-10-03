@@ -574,3 +574,8 @@ a.topic-status.unpinned::before {/*For personally unpinned topics*/
   --canvas-default:#2d2318;
   --canvas-subtle:#1c160f;
 }
+
+/* Code block background */
+pre > code {
+  background: var(--neutral-muted) !important;
+}
