@@ -134,8 +134,14 @@ tbody {
   background-color: #1c1610;
 }
 
+// 3.6.0 compatibility, correct background color for topics
+.topic-list-item.visited, .latest-topic-list-item.visited, .category-topic-link.visited {
+	background-color: #1c1610;
+}
+
 .topic-list-item {
 	border-bottom: 1px solid #382418;
+  background-color: #1c1610;
 }
 
 // hide avatars from topic lists
@@ -175,6 +181,12 @@ tbody {
 
 .list-cell, .category-list td, .category-list th, .table-heading {
 	color: var(--primary-high);
+}
+
+//3.6.0 compatibility, full-width for categories
+.category-list {
+	margin-bottom: 10px;
+	width: 105%;
 }
 
 // allow post titles to span across the entire post container
@@ -243,8 +255,23 @@ body:not(.archetype-private_message) .topic-map {
 	width: 0px;
 }*/
 
+
+// 3.6.0 compatibility, correct color of table heading
+// so it matches "Categories" text above
+.latest-topic-list .table-heading, .top-topic-list .table-heading {
+	padding: 12px 5px;
+	color: rgb(191.25, 191.25, 191.25);
+}
+
+// 3.6.0 compatibility, tighten up latest topics a bit so the padding of the 
+// numbers on the right match the full-width categories above them
 .latest-topic-list-item {
 	border-bottom: 1px solid #382418;
+  padding: 0.50em;
+}
+
+.latest-topic-list-item .topic-stats {
+	text-align: right;
 }
 
 .post-action-menu__like-count {
@@ -496,7 +523,7 @@ nav.post-controls .actions button.btn-icon-text, nav.post-controls .actions butt
 
 /* Fixes for moving stuff to the right when sidebar is expanded */
 body.has-sidebar-page .discourse-root {
-  background-position: calc(50% + 148px) center;
+  background-position: calc(50% + 154px) center;
 }
 body.has-sidebar-page .topic-navigation {
   right: 45px;
